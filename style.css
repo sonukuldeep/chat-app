@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+header .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: 52px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header .navbar ul .authentication {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navbar ul .authentication div {
+    margin: 0 10px;
+}
+
+header .navbar ul .share {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navbar ul .share ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+header .navbar ul .share:hover ul {
+    display: block;
+}
