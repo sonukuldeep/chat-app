@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header .navbar {
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        // margin-top: 5px;
+
+        li {
+            padding: 10px 5px;
+            margin: 0 5px;
+            cursor: pointer;
+            outline: 1px solid #333;
+        }
+
+        .brand-icon-mag {
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .logo {
+                    padding: 0;
+                    scale: 0.8;
+                    outline: none;
+                }
+            }
+        }
+        
+        .chat-options ul,
+        .more-options ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .share {
+                position: relative;
+
+                ul {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 40%;
+                    transform: translate(-50%, -4px);
+                }
+
+                &:hover ul {
+                    display: block;
+                }
+            }
+        }
+
+        .chat-options .touch-devices ul,
+        .more-options .touch-devices  ul{
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            align-items: flex-start;
+            margin-top: 5px;
+            margin-right: auto;
+            
+            .chat-options {
+                margin-left: auto;
+                transition: transform 1s;
+            }
+
+            .chat-options .big-devices,
+            .more-options .big-devices {
+                display: none;
+            }
+
+            .chat-options .touch-devices ul,
+            .more-options .touch-devices ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 5px;
+
+                .enableOnClick.disabled {
+                    display: none;
+                }
+            }
+        }
+    }
+}

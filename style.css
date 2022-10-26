@@ -1,49 +1,85 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-ul {
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 header .navbar ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
 }
-
-a {
-    text-decoration: none;
-    color: #333;
+header .navbar ul li {
+  padding: 10px 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  outline: 1px solid #333;
 }
-
-header .navbar ul .authentication {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+header .navbar ul .brand-icon-mag ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-header .navbar ul .authentication div {
-    margin: 0 10px;
+header .navbar ul .brand-icon-mag ul .logo {
+  padding: 0;
+  scale: 0.8;
+  outline: none;
 }
-
-header .navbar ul .share {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+header .navbar ul .chat-options ul,
+header .navbar ul .more-options ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-header .navbar ul .share ul {
+header .navbar ul .chat-options ul a,
+header .navbar ul .more-options ul a {
+  text-decoration: none;
+  color: #333;
+}
+header .navbar ul .chat-options ul .share,
+header .navbar ul .more-options ul .share {
+  position: relative;
+}
+header .navbar ul .chat-options ul .share ul,
+header .navbar ul .more-options ul .share ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  transform: translate(-50%, -4px);
+}
+header .navbar ul .chat-options ul .share:hover ul,
+header .navbar ul .more-options ul .share:hover ul {
+  display: block;
+}
+header .navbar ul .chat-options .touch-devices ul,
+header .navbar ul .more-options .touch-devices ul {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header .navbar ul {
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-right: auto;
+  }
+  header .navbar ul .chat-options {
+    margin-left: auto;
+    transition: transform 1s;
+  }
+  header .navbar ul .chat-options .big-devices,
+header .navbar ul .more-options .big-devices {
     display: none;
-    position: absolute;
-    top: 100%;
-}
-
-header .navbar ul .share:hover ul {
-    display: block;
+  }
+  header .navbar ul .chat-options .touch-devices ul,
+header .navbar ul .more-options .touch-devices ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  header .navbar ul .chat-options .touch-devices ul .enableOnClick.disabled,
+header .navbar ul .more-options .touch-devices ul .enableOnClick.disabled {
+    display: none;
+  }
 }

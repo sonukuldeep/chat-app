@@ -1,41 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./Config/firebaseConfig.js"></script>
+    <script type="module" src="./script.js"></script>
     <title>Chat</title>
 </head>
+
 <body>
     <header>
         <nav>
             <div class="navbar">
                 <ul>
-                    <li class="logo">
-                        <svg width="48" height="48" viewBox="0 0 48 48" stroke="hsl(23, 67%, 30%)" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="24" cy="24" r="19"/>
-                        <line x1="28" y1="21" x2="36" y2="21"/>
-                        <line x1="13" y1="21" x2="21" y2="21"/>
-                        <path d="M24.8777 35.3592C29.2357 37.2047 30.5449 35.927 32.4419 32.7547"/>
-                        </svg>
-                    </li>
-                    <li>Welcome to xoxo</li>
-                    <li>Chat with a Random Person</li>
-                    <li>Chat with a friend</li>
-                    <li>Group Chat</li>
-                    <li class="authentication">
-                        <div class="signIn signOut">SignIn/SignOut</div>
-                        <div class="signUp">SignUp</div>
-                    </li>
-                    <li class="share">
-                        <div>Share
+                    <div class="brand-icon-mag">
+                        <ul>
+                            <li class="logo">
+                                <svg width="48" height="48" viewBox="0 0 48 48" stroke="#333" fill="none"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="24" cy="24" r="19" />
+                                    <line x1="28" y1="21" x2="36" y2="21" />
+                                    <line x1="13" y1="21" x2="21" y2="21" />
+                                    <path d="M24.8777 35.3592C29.2357 37.2047 30.5449 35.927 32.4419 32.7547" />
+                                </svg>
+                            </li>
+                            <li class="website-catch-phase">Welcome to xoxo</li>
+                        </ul>
+                    </div>
+                    <div class="chat-options">
+                        <ul class="big-devices">
+                            <li>Chat with a Random Person</li>
+                            <li>Chat with a friend</li>
+                            <li>Group Chat</li>
+                        </ul>
+                        <ul class="touch-devices">
                             <ul>
-                                <li>link</li>
+                                <li class="activateList"><i class="fa-solid fa-comments"></i></li>
+                                <ul class="enableOnClick disabled">
+                                    <li>Chat with a Random Person</li>
+                                    <li>Chat with a friend</li>
+                                    <li><a href="./gChat.html">Group chat</a></li>
+                                </ul>
                             </ul>
-                        </div>
-                    </li>
-                    <li><a href="#">Buy me a cup of tea</a></li>
+                        </ul>
+                    </div>
+                    <div class="more-options">
+                        <ul class="big-devices">
+                            <li id="signIn-signOut" class="authentication">
+                                <div class="signIn">SignIn/SignOut</div>
+                            </li>
+                            <li class="authentication">
+                                <div class="signUp">SignUp</div>
+                            </li>
+                            <li class="donate"><a href="#">Buy me a cup of tea</a></li>
+                        </ul>
+                        <ul class="touch-devices">
+                            <ul>
+                                <li class="activateList"><i class="fa-solid fa-bars"></i></li>
+                                <ul class="enableOnClick disabled">
+                                    <li id="signIn-signOut" class="authentication">
+                                        <div class="signIn">SignIn/SignOut</div>
+                                    </li>
+                                    <li class="authentication">
+                                        <div class="signUp">SignUp</div>
+                                    </li>
+                                    <li class="donate"><a href="#">Buy me a cup of tea</a></li>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </div>
                 </ul>
             </div>
         </nav>
@@ -44,4 +84,5 @@
     <aside></aside>
     <footer></footer>
 </body>
+
 </html>
