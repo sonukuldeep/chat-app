@@ -9,7 +9,13 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
   margin: auto;
+}
+.container .btns {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .container .chat-box {
   display: grid;
@@ -20,22 +26,29 @@
 .container .chat-box .box:nth-of-type(1) {
   grid-row-start: 1;
   grid-row-end: 3;
+  display: block;
 }
 .container .chat-box .box:nth-of-type(2) {
-  height: calc(200% - 20px);
+  height: calc(200% - 130px);
   border-left: none;
+  border-bottom: none;
+  display: block;
 }
 .container .chat-box .box:nth-of-type(3) {
   height: 50px;
   align-self: end;
   border-left: none;
-  border-top: none;
 }
 .container .chat-box .box:nth-of-type(3) input {
   border: none;
   width: 100%;
   font-size: 1.5rem;
   padding: 0 5px;
+}
+.container .chat-box .box:nth-of-type(3) .sendBtn {
+  width: 80px;
+  background: burlywood;
+  border-radius: 5px;
 }
 .container .box {
   border: 1px solid #333;

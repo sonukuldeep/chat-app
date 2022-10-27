@@ -6,15 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./gchat.css">
+    <script type="module" src="./Config/firebaseConfig.js"></script>
+    <script type="module" src="./script.js"></script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="container">
+        <div id="signIn-signOut" class="btns">
+            <a href="http://localhost:5500">Back</a>
+            <div class="signIn"></div>
+        </div>
         <div class="chat-box">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box"><input type="text"></div>
+            <div class="box chat-user">1</div>
+            <div class="box chat-window">2</div>
+            <div class="box">
+                <input id="userMsg" type="text">
+                <button class="sendBtn">Send</button></div>
         </div>
     </div>
 </body>

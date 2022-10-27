@@ -9,7 +9,14 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
     margin: auto;
+
+    .btns {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 
     .chat-box {
         display: grid;
@@ -20,24 +27,34 @@
         .box:nth-of-type(1) {
             grid-row-start: 1;
             grid-row-end: 3;
+            display: block;
+
         }
 
         .box:nth-of-type(2) {
-            height: calc(200% - 20px);
+            height: calc(200% - 130px);
             border-left: none;
+            border-bottom: none;
+            display: block;
         }
 
         .box:nth-of-type(3) {
             height: 50px;
             align-self: end;
             border-left: none;
-            border-top: none;
-            
+            // border-top: none;
+
             input {
                 border: none;
                 width: 100%;
                 font-size: 1.5rem;
                 padding: 0 5px;
+            }
+
+            .sendBtn {
+                width: 80px;
+                background: burlywood;
+                border-radius: 5px;
             }
         }
     }
