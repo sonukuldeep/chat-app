@@ -13,16 +13,43 @@
 
 <body>
     <div class="container">
-        <div id="signIn-signOut" class="btns">
-            <a href="http://localhost:5500">Back</a>
-            <div class="signIn"></div>
+        <div class="more-options prevent-select">
+            <ul class="big-devices">
+                <li id="signIn-signOut" class="authentication">
+                    <div class="signIn">Log in</div>
+                </li>
+                <li><a href="http://localhost:5500">Back</a></li>
+                <li class="donate"><a href="#">Buy me a cup of tea</a></li>
+            </ul>
+            <ul class="touch-devices">
+                <li id="signIn-signOut" class="authentication">
+                    <div class="signIn">Log in</div>
+                </li>
+                <li><a href="http://localhost:5500">Back</a></li>
+                <li class="donate"><a href="#">Buy me a cup of tea</a></li>
+            </ul>
         </div>
-        <div class="chat-box">
-            <div class="box chat-user">1</div>
-            <div class="box chat-window">2</div>
+        <div class="hello-msg">
+            <svg viewBox="0 0 150 20">
+                <symbol id="s-text">
+                  <text text-anchor="middle" x="50%" y="75%">Talk to Random People</text>
+                </symbol>
+                <g class="g-ants">
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                  <use xlink:href="#s-text" class="text-copy"></use>
+                </g>
+              </svg>
+        </div>
+        <div class="chat-box prevent-select">
+            <div class="box chat-user"></div>
+            <div id="chat-window" class="box chat-window"></div>
             <div class="box">
                 <input id="userMsg" type="text">
-                <button class="sendBtn">Send</button></div>
+                <button class="sendBtn">Send</button>
+            </div>
         </div>
     </div>
 </body>

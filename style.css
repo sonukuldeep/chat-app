@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(./Assets/background2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 header .navbar ul {
   display: flex;
   justify-content: space-between;
@@ -11,10 +17,12 @@ header .navbar ul {
   list-style: none;
 }
 header .navbar ul li {
+  color: #fff;
+  font-weight: 700;
   padding: 10px 5px;
   margin: 0 5px;
   cursor: pointer;
-  outline: 1px solid #333;
+  outline: 3px solid #fff;
 }
 header .navbar ul .brand-icon-mag ul {
   display: flex;
@@ -35,7 +43,7 @@ header .navbar ul .more-options ul {
 header .navbar ul .chat-options ul a,
 header .navbar ul .more-options ul a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 header .navbar ul .chat-options ul .share,
 header .navbar ul .more-options ul .share {

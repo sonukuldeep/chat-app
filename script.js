@@ -33,8 +33,8 @@ function callGoogleSignIn(){
 
 const msg = document.querySelector("#userMsg")
 const btnTrigger = document.querySelector(".sendBtn")
-msg.addEventListener("keypress",(event)=>{ if(event.key === "Enter"){event.preventDefault();sendMsg()}})
-btnTrigger.addEventListener("click",()=>{sendMsg()})
+msg?.addEventListener("keypress",(event)=>{ if(event.key === "Enter"){event.preventDefault();sendMsg()}})
+btnTrigger?.addEventListener("click",()=>{sendMsg()})
 function sendMsg(){
     addToRealTimeDB(msg.value)
     console.log(msg.value)

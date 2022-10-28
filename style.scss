@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(./Assets/background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 header .navbar {
 
     ul {
@@ -11,13 +17,14 @@ header .navbar {
         justify-content: space-between;
         align-items: center;
         list-style: none;
-        // margin-top: 5px;
 
         li {
+            color:#fff;
+            font-weight: 700;
             padding: 10px 5px;
             margin: 0 5px;
             cursor: pointer;
-            outline: 1px solid #333;
+            outline: 3px solid #fff;
         }
 
         .brand-icon-mag {
@@ -42,7 +49,7 @@ header .navbar {
 
             a {
                 text-decoration: none;
-                color: #333;
+                color: #fff;
             }
 
             .share {
