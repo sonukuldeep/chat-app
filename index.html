@@ -17,7 +17,7 @@
 <body>
     <header>
         <nav>
-            <div class="navbar">
+            <div class="navbar prevent-select">
                 <ul>
                     <div class="brand-icon-mag">
                         <ul>
@@ -38,7 +38,7 @@
                         <ul class="big-devices">
                             <!-- <li>Chat with a Random Person</li> -->
                             <!-- <li>Chat with a friend</li> -->
-                            <li><a href="./gChat.html">Group chat</a></li>
+                            <li class="trigger-group-chat">Group chat</li>
                         </ul>
                         <ul class="touch-devices">
                             <ul>
@@ -46,7 +46,7 @@
                                 <ul class="enableOnClick disabled">
                                     <!-- <li>Chat with a Random Person</li> -->
                                     <!-- <li>Chat with a friend</li> -->
-                                    <li><a href="./gChat.html">Group chat</a></li>
+                                    <li class="trigger-group-chat">Group chat</li>
                                 </ul>
                             </ul>
                         </ul>
@@ -57,7 +57,7 @@
                                 <div class="signIn">Log in</div>
                             </li>
                             <!-- <li class="authentication"> -->
-                                <!-- <div class="signUp">SignUp</div> -->
+                            <!-- <div class="signUp">SignUp</div> -->
                             <!-- </li> -->
                             <li class="donate"><a href="#">Buy me a cup of tea</a></li>
                         </ul>
@@ -69,7 +69,7 @@
                                         <div class="signIn">Log in</div>
                                     </li>
                                     <!-- <li class="authentication"> -->
-                                        <!-- <div class="signUp">SignUp</div> -->
+                                    <!-- <div class="signUp">SignUp</div> -->
                                     <!-- </li> -->
                                     <li class="donate"><a href="#">Buy me a cup of tea</a></li>
                                 </ul>
@@ -80,9 +80,39 @@
             </div>
         </nav>
     </header>
-    <section></section>
+    <main>
+        <section>
+            <div class="disclaimer prevent-select">
+                <h3>Things you need to note</h3>
+                <ul>
+                    <li>By using this website you confirm that you are above 18 years of age.</li>
+                    <li>Chat rooms get reset everyday.</li>
+                    <li>You are soley responsible for any information that you share here on this website.</li>
+                    <li>You are WARNED AGAINST sharing ANY PERSONAL INFORMATION with anyone on this website.</li>
+                    <li>Mindless spammers will get their accound banned.</li>
+                </ul>
+
+            </div>
+        </section>
+    </main>
+    <section id="popup" class="disable">
+        <div class="popup-container">
+            <div class="card-container">
+                <span class="close">&times;</span>
+                <div class="card">
+                    <p>Chat rules</p>
+                    <ul>
+                        <li>This chat is completely public.</li>
+                        <li>Be nice to others. Chat with random people and have a good time.</li>
+                        <li>Bulling or offensive language will result in permanent ban.</li>
+                    </ul>
+                    <div class="btn"><a href="./gChat.html">Agree</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <aside></aside>
-    <footer></footer>
+    <footer>Eastern Dev &#169; 2022</footer>
 </body>
 
 </html>

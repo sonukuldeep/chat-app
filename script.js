@@ -40,3 +40,11 @@ function sendMsg(){
     console.log(msg.value)
     msg.value = ""
 }
+
+const popup = document.querySelector("#popup")
+const popupCloseBtn = document.querySelector("#popup .close")
+popupCloseBtn?.addEventListener("click", ()=>{popup.classList.toggle("disable")})
+
+const groupChatBtn = document.querySelectorAll(".trigger-group-chat")
+groupChatBtn[0]?.addEventListener("click", ()=>{popup.classList.toggle("disable")})
+groupChatBtn[1]?.addEventListener("click", ()=>{popup.classList.toggle("disable")})
