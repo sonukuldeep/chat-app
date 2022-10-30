@@ -35,6 +35,12 @@ body {
                 margin: 0 5px;
                 cursor: pointer;
                 outline: 3px solid #fff;
+                text-shadow: none;
+                transition: text-shadow 0.3s;
+                
+                &:hover{
+                    text-shadow: 1px 1px 3px #000;
+                }
             }
 
             .brand-icon-mag {
@@ -62,8 +68,36 @@ body {
                     color: #fff;
                 }
 
+                .profile {
+                    position: relative;
+                    width: 105px;
+                    padding: 0;
+                    text-align: center;
+
+                    ul {
+                        display: none;
+                        flex-direction: column;
+                        position: absolute;
+                        left: 50%;
+                        top: 150%;
+                        transform: translateX(-50%);
+
+                        li {
+                            width: 100px;
+                            margin: 3px 0;
+                            
+                        }
+
+                    }
+
+                }
+
+                .profile-tab:hover ul {
+                    display: flex;
+                }
+
+
                 .share {
-                    // position: relative;
 
                     ul {
                         display: none;
@@ -80,7 +114,7 @@ body {
             }
 
             .chat-options .touch-devices ul,
-            .more-options .touch-devices ul {
+            .more-options .touch-devices {
                 display: none;
             }
 
@@ -88,24 +122,44 @@ body {
                 align-items: flex-start;
                 margin-top: 5px;
                 margin-right: auto;
-
+                .brand-icon-mag {
+                    ul {
+                        margin-top: 10px;
+                        margin-left:5px;
+                        .logo {
+                            display: none;
+                        }
+                    }
+                }
+                
                 .chat-options {
                     margin-left: auto;
                     transition: transform 1s;
                 }
-
+                
                 .chat-options .big-devices,
                 .more-options .big-devices {
                     display: none;
                 }
+                
+                .chat-options .touch-devices,
+                .more-options .touch-devices {
+                    display: block;
+                    margin-top: 10px;
+                    text-align: center;
+                    margin-right: 5px;
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        gap: 5px;
 
-                .chat-options .touch-devices ul,
-                .more-options .touch-devices ul {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-                    gap: 5px;
+                        li{
+                            width: 100px;
+                            text-align: center;
+                        }
 
+                    }
                     .enableOnClick.disabled {
                         display: none;
                     }
@@ -171,7 +225,7 @@ body {
                         text-align: justify;
                         padding: 5px;
                         margin-top: 5px;
-                        
+
                     }
 
                     p {
@@ -187,6 +241,7 @@ body {
                         background-color: rgba(255, 255, 255, 0.7);
                         border-radius: 3px;
                         transition: background-color 0.3s;
+
                         &:hover {
 
                             background-color: #fff;
@@ -264,6 +319,14 @@ body {
         top: 95vh;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 768px) {
+        main section {
+            width: min(100% - 2rem,700px);
+        }
+
+        
     }
 
 }

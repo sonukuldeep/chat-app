@@ -33,6 +33,11 @@ body header .navbar ul li {
   margin: 0 5px;
   cursor: pointer;
   outline: 3px solid #fff;
+  text-shadow: none;
+  transition: text-shadow 0.3s;
+}
+body header .navbar ul li:hover {
+  text-shadow: 1px 1px 3px #000;
 }
 body header .navbar ul .brand-icon-mag ul {
   display: flex;
@@ -55,6 +60,31 @@ body header .navbar ul .more-options ul a {
   text-decoration: none;
   color: #fff;
 }
+body header .navbar ul .chat-options ul .profile,
+body header .navbar ul .more-options ul .profile {
+  position: relative;
+  width: 105px;
+  padding: 0;
+  text-align: center;
+}
+body header .navbar ul .chat-options ul .profile ul,
+body header .navbar ul .more-options ul .profile ul {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  transform: translateX(-50%);
+}
+body header .navbar ul .chat-options ul .profile ul li,
+body header .navbar ul .more-options ul .profile ul li {
+  width: 100px;
+  margin: 3px 0;
+}
+body header .navbar ul .chat-options ul .profile-tab:hover ul,
+body header .navbar ul .more-options ul .profile-tab:hover ul {
+  display: flex;
+}
 body header .navbar ul .chat-options ul .share ul,
 body header .navbar ul .more-options ul .share ul {
   display: none;
@@ -68,7 +98,7 @@ body header .navbar ul .more-options ul .share:hover ul {
   display: block;
 }
 body header .navbar ul .chat-options .touch-devices ul,
-body header .navbar ul .more-options .touch-devices ul {
+body header .navbar ul .more-options .touch-devices {
   display: none;
 }
 @media screen and (max-width: 768px) {
@@ -76,6 +106,13 @@ body header .navbar ul .more-options .touch-devices ul {
     align-items: flex-start;
     margin-top: 5px;
     margin-right: auto;
+  }
+  body header .navbar ul .brand-icon-mag ul {
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  body header .navbar ul .brand-icon-mag ul .logo {
+    display: none;
   }
   body header .navbar ul .chat-options {
     margin-left: auto;
@@ -85,6 +122,13 @@ body header .navbar ul .more-options .touch-devices ul {
 body header .navbar ul .more-options .big-devices {
     display: none;
   }
+  body header .navbar ul .chat-options .touch-devices,
+body header .navbar ul .more-options .touch-devices {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    margin-right: 5px;
+  }
   body header .navbar ul .chat-options .touch-devices ul,
 body header .navbar ul .more-options .touch-devices ul {
     display: flex;
@@ -92,8 +136,13 @@ body header .navbar ul .more-options .touch-devices ul {
     align-items: flex-end;
     gap: 5px;
   }
-  body header .navbar ul .chat-options .touch-devices ul .enableOnClick.disabled,
-body header .navbar ul .more-options .touch-devices ul .enableOnClick.disabled {
+  body header .navbar ul .chat-options .touch-devices ul li,
+body header .navbar ul .more-options .touch-devices ul li {
+    width: 100px;
+    text-align: center;
+  }
+  body header .navbar ul .chat-options .touch-devices .enableOnClick.disabled,
+body header .navbar ul .more-options .touch-devices .enableOnClick.disabled {
     display: none;
   }
 }
@@ -236,4 +285,9 @@ body footer {
   top: 95vh;
   left: 50%;
   transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+  body main section {
+    width: min(100% - 2rem, 700px);
+  }
 }

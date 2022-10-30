@@ -73,6 +73,7 @@
 }
 .container .hello-msg {
   margin-bottom: 20px;
+  margin-top: 10px;
   background: rgba(115, 101, 166, 0.36);
   border: 1px solid #fff;
   border-radius: 10px/20px;
@@ -206,6 +207,7 @@
 }
 @media screen and (max-width: 768px) {
   .container .chat-box {
+    margin-top: 50px;
     height: 95%;
     width: 95%;
   }
@@ -214,5 +216,8 @@
     padding-top: 30px;
     font-size: large;
     color: #fff;
+  }
+  .container .hello-msg {
+    display: none;
   }
 }
