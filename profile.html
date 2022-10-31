@@ -11,19 +11,29 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul class="big-devices">
+                <li id="signIn-signOut" class="profile signIn"><a href="#">Log in</a></li>
+                <li class=""><a href="./index.html">Back</a></li>
+            </ul>
+            <ul class="touch-devices">
+                <li id="signIn-signOut" class="chat-list signIn">Log In</li>
+                <li class=""><a href="./index.html">Back</a></li>
+            </ul>
+        </nav>
+    </header>
     <section>
-        
         <div>
             <label for="image">Upload image:</label>
             <button id="fileSelect">Select an Image</button>
-            <input type="file" id="imageUpload" accept="image/*"/>
+            <input type="file" id="imageUpload" accept="image/*" />
         </div>
         <div>
             <div id="preview"></div>
             <button id="upload-btn">update profile image</button>
         </div>
     </section>
-
+    <footer></footer>
 </body>
-
 </html>

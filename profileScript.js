@@ -42,7 +42,7 @@ function handleFiles() {
 
   fileSelect.innerText = file.name
 
-  const uploadFileName = `/${uid}/avatar/pic,jpeg`
+  const uploadFileName = `/${uid}/avatar/pic.jpeg`
 
   const path = ref(storageRef, uploadFileName)
 

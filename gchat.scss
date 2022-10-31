@@ -166,6 +166,12 @@
                 text-transform: capitalize;
 
             }
+
+            .user {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
         }
 
         .box:nth-of-type(2) {
