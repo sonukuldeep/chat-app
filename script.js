@@ -18,7 +18,7 @@ signin_out.addEventListener("click", () => { callGoogleSignIn() })
 function callGoogleSignIn() {
     const signoutButton = document.querySelectorAll('.signIn')[0]
     if (signoutButton.classList.contains("logged-in")) {
-        logout()
+        // logout()
     } else {
         googleSignIn()
 

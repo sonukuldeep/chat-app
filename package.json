@@ -1,0 +1,23 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "encryptDecrypt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonukuldeep/chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonukuldeep/chat-app/issues"
+  },
+  "homepage": "https://github.com/sonukuldeep/chat-app#readme",
+  "dependencies": {
+    "firebase": "^9.13.0"
+  }
+}
