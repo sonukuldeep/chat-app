@@ -65,6 +65,8 @@ function uploadPp() {
   // 'file' comes from the Blob or File API
   uploadBytes(fullPath, uploadFile).then((snapshot) => {
     console.log('Uploaded a profile image!');
+    fullPath = undefined 
+    document.querySelector('section div').innerHTML = '<h2 style="color: white; text-shadow: 2px 2px 5px #333">Profile pic successfully uploaded</h2>'
   });
 
 }
