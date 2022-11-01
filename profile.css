@@ -47,6 +47,11 @@ section {
   justify-content: space-evenly;
   align-items: center;
   margin: 20px 0;
+  color: #fff;
+  font-weight: 700;
+}
+section button {
+  padding: 5px;
 }
 section #imageUpload {
   display: none;
@@ -59,7 +64,7 @@ section div:nth-of-type(2) {
 section #preview {
   width: 300px;
   height: 300px;
-  border: 1px solid black;
+  border: 3px solid #fff;
   overflow: hidden;
   border-radius: 50%;
   display: flex;
@@ -80,6 +85,33 @@ section .image-obj {
 body {
   position: relative;
   height: 100vh;
+  background: linear-gradient(-45deg, #ee7752, #e72c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 body footer {
   height: 72px;
