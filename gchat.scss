@@ -206,6 +206,16 @@
             .left {
                 align-self: flex-start;
             }
+
+            .chat-msg {
+                display: flex;
+                flex-direction: column;
+                .subscript {
+                    display: none;
+                    font-size: x-small;
+                    text-transform: lowercase;
+                }
+            }
         }
 
         .box:nth-of-type(3) {
@@ -227,6 +237,9 @@
                 width: 80px;
                 background: burlywood;
                 border-radius: 5px;
+                color: #fff;
+                text-shadow: 2px 2px 5px #333;
+                font-weight: 800;
             }
         }
 

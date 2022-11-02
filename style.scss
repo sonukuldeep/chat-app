@@ -325,7 +325,9 @@ body {
         main section {
             width: min(100% - 2rem,700px);
         }
-
+        #popup .popup-container .card-container {
+            width: min(90% , 420px);
+        }
         
     }
 

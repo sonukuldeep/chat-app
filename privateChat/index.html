@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./gchat.css">
-    <script type="module" src="./Config/firebaseConfig.js"></script>
-    <script type="module" src="./script.js"></script>
-    <!-- <script type="module" src="./gChat.js"></script> -->
-    <title>Document</title>
+    <link rel="stylesheet" href="../gchat.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Private room</title>
 </head>
 
 <body>
@@ -31,9 +29,9 @@
             </ul>
         </div>
         <div class="hello-msg">
-            <svg viewBox="0 0 150 20">
+            <svg viewBox="0 0 180 20">
                 <symbol id="s-text">
-                  <text text-anchor="middle" x="50%" y="75%">Talk to Random People</text>
+                  <text text-anchor="middle" x="50%" y="75%">Talk to a Random Stranger</text>
                 </symbol>
                 <g class="g-ants">
                   <use xlink:href="#s-text" class="text-copy"></use>
@@ -45,7 +43,7 @@
               </svg>
         </div>
         <div class="chat-box prevent-select">
-            <div class="box chat-user"></div>
+            <!-- <div class="box chat-user"></div> -->
             <div id="chat-window" class="box chat-window"></div>
             <div class="box">
                 <input id="userMsg" type="text">

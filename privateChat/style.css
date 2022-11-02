@@ -1,0 +1,20 @@
+.container .chat-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
+  width: 50%;
+}
+.container .chat-box #chat-window {
+  height: auto;
+}
+.container .chat-box .box {
+  position: relative;
+  height: 40px;
+}
+.container .chat-box .box .sendBtn {
+  position: absolute;
+  right: 0;
+  height: 40px;
+  width: 100px;
+  font-weight: 500;
+}
