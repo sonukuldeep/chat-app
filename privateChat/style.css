@@ -11,6 +11,10 @@
   position: relative;
   height: 40px;
 }
+.container .chat-box .box #userMsg {
+  height: 100%;
+  width: auto;
+}
 .container .chat-box .box .sendBtn {
   position: absolute;
   right: 0;

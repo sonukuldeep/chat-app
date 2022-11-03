@@ -54,3 +54,8 @@ popupCloseBtn?.addEventListener("click", () => { popup.classList.toggle("disable
 const groupChatBtn = document.querySelectorAll(".trigger-group-chat")
 groupChatBtn[0]?.addEventListener("click", () => { popup.classList.toggle("disable") })
 groupChatBtn[1]?.addEventListener("click", () => { popup.classList.toggle("disable") })
+
+const popupPrivate = document.querySelector("#popup-private")
+const privatepChatBtn = document.querySelectorAll(".trigger-private-chat")
+privatepChatBtn[0]?.addEventListener("click", () => { popupPrivate.classList.toggle("disable") })
+privatepChatBtn[1]?.addEventListener("click", () => { popupPrivate.classList.toggle("disable") })

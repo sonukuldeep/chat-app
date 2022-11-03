@@ -194,11 +194,11 @@ body {
         }
     }
 
-    #popup.disable {
+    #popup.disable, #popup-private.disable {
         display: none;
     }
 
-    #popup {
+    #popup, #popup-private {
         .popup-container {
             height: 75vh;
             display: flex;
@@ -253,6 +253,14 @@ body {
                             width: 100%;
                             text-decoration: none;
                             padding: 2px 0;
+                        }
+                    }
+                    .btn-justify-col {
+                        display: flex;
+                        justify-content: center;
+                        div {
+                            width: 100px;
+                            margin: 5px;
                         }
                     }
 

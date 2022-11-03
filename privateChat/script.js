@@ -1,2 +1,8 @@
-import { addToPrivateDB } from '../Config/firebaseConfig.js'
-addToPrivateDB()
+import { addToPrivateDB, privateChat } from '../Config/firebaseConfig.js'
+//addToPrivateDB()
+
+document.addEventListener('DOMContentLoaded',()=>{
+    addToPrivateDB()
+    privateChat()
+
+})

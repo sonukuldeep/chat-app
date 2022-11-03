@@ -38,6 +38,7 @@
                         <ul class="big-devices">
                             <!-- <li>Chat with a Random Person</li> -->
                             <!-- <li>Chat with a friend</li> -->
+                            <li class="trigger-private-chat">Private Chat</li>
                             <li class="trigger-group-chat">Group chat</li>
                         </ul>
                         <ul class="touch-devices">
@@ -45,7 +46,7 @@
                                 <li class="chat-list"><i class="fa-solid fa-comments"></i></li>
                                 <ul class="enableOnClick disabled">
                                     <!-- <li>Chat with a Random Person</li> -->
-                                    <!-- <li>Chat with a friend</li> -->
+                                    <li class="trigger-private-chat">Private Chat</li>
                                     <li class="trigger-group-chat">Group chat</li>
                                 </ul>
                             </ul>
@@ -104,22 +105,44 @@
             </div>
         </section>
     </main>
-    <section id="popup" class="disable">
-        <div class="popup-container">
-            <div class="card-container">
-                <span class="close">&times;</span>
-                <div class="card">
-                    <p>Chat rules</p>
-                    <ul>
-                        <li>This chat is completely public.</li>
-                        <li>Be nice to others. Chat with random people and have a good time.</li>
-                        <li>Bulling or offensive language will result in permanent ban.</li>
-                    </ul>
-                    <div class="btn"><a href="./gChat.html">Agree</a></div>
+    <section>
+        <div id="popup" class="disable">
+            <div class="popup-container">
+                <div class="card-container">
+                    <span class="close">&times;</span>
+                    <div class="card">
+                        <p>Chat rules</p>
+                        <ul>
+                            <li>This chat is completely public.</li>
+                            <li>Be nice to others. Chat with random people and have a good time.</li>
+                            <li>Bulling or offensive language will result in permanent ban.</li>
+                        </ul>
+                        <div class="btn"><a href="./gChat.html">Agree</a></div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="popup-private" class="disable">
+            <div class="popup-container">
+                <div class="card-container">
+                    <span class="close">&times;</span>
+                    <div class="card">
+                        <p>Chat rules</p>
+                        <ul>
+                            <li>Do not share private information of any kind</li>
+                            <li>Be nice to people.</li>
+                            <li>Bulling or offensive language will result in permanent ban.</li>
+                        </ul>
+                        <div class="btn-justify-col">
+                            <div class="btn"><a href="./privateChat/index.html">Create a room</a></div>
+                            <div class="btn"><a href="./privateChat/join.html">Join a room</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
     </section>
+    
     <aside></aside>
     <footer>Eastern Dev &#169; 2022</footer>
 </body>

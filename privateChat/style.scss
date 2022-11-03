@@ -11,6 +11,11 @@
     .box {
         position: relative;
         height: 40px;
+
+        #userMsg {
+            height: 100%;
+            width:auto;
+        }
         .sendBtn {
             position: absolute;
             right: 0;

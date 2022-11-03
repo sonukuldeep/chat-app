@@ -169,16 +169,16 @@ body main section .disclaimer h3 {
   text-decoration: underline;
   padding-bottom: 15px;
 }
-body #popup.disable {
+body #popup.disable, body #popup-private.disable {
   display: none;
 }
-body #popup .popup-container {
+body #popup .popup-container, body #popup-private .popup-container {
   height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body #popup .popup-container .card-container {
+body #popup .popup-container .card-container, body #popup-private .popup-container .card-container {
   display: grid;
   place-items: center;
   position: relative;
@@ -188,7 +188,7 @@ body #popup .popup-container .card-container {
   background-color: #fff;
   overflow: hidden;
 }
-body #popup .popup-container .card-container .card {
+body #popup .popup-container .card-container .card, body #popup-private .popup-container .card-container .card {
   width: 99%;
   height: 99%;
   padding: 1rem;
@@ -202,18 +202,18 @@ body #popup .popup-container .card-container .card {
   overflow: hidden;
   z-index: 1;
 }
-body #popup .popup-container .card-container .card ul {
+body #popup .popup-container .card-container .card ul, body #popup-private .popup-container .card-container .card ul {
   font-size: 16px;
   text-align: justify;
   padding: 5px;
   margin-top: 5px;
 }
-body #popup .popup-container .card-container .card p {
+body #popup .popup-container .card-container .card p, body #popup-private .popup-container .card-container .card p {
   font-size: xx-large;
   text-decoration: underline;
   margin-top: 5px;
 }
-body #popup .popup-container .card-container .card .btn {
+body #popup .popup-container .card-container .card .btn, body #popup-private .popup-container .card-container .card .btn {
   margin-top: 5px;
   width: 60px;
   align-self: center;
@@ -221,17 +221,25 @@ body #popup .popup-container .card-container .card .btn {
   border-radius: 3px;
   transition: background-color 0.3s;
 }
-body #popup .popup-container .card-container .card .btn:hover {
+body #popup .popup-container .card-container .card .btn:hover, body #popup-private .popup-container .card-container .card .btn:hover {
   background-color: #fff;
 }
-body #popup .popup-container .card-container .card .btn a {
+body #popup .popup-container .card-container .card .btn a, body #popup-private .popup-container .card-container .card .btn a {
   color: #333;
   display: inline-block;
   width: 100%;
   text-decoration: none;
   padding: 2px 0;
 }
-body #popup .popup-container .card-container::before {
+body #popup .popup-container .card-container .card .btn-justify-col, body #popup-private .popup-container .card-container .card .btn-justify-col {
+  display: flex;
+  justify-content: center;
+}
+body #popup .popup-container .card-container .card .btn-justify-col div, body #popup-private .popup-container .card-container .card .btn-justify-col div {
+  width: 100px;
+  margin: 5px;
+}
+body #popup .popup-container .card-container::before, body #popup-private .popup-container .card-container::before {
   content: "";
   position: absolute;
   width: 480px;
@@ -241,7 +249,7 @@ body #popup .popup-container .card-container::before {
   background-color: #377953;
   transform: rotate(-45deg) translate(0, -100px);
 }
-body #popup .popup-container .card-container:hover::before {
+body #popup .popup-container .card-container:hover::before, body #popup-private .popup-container .card-container:hover::before {
   -webkit-animation-name: cardEffect;
           animation-name: cardEffect;
   -webkit-animation-timing-function: linear;
@@ -263,7 +271,7 @@ body #popup .popup-container .card-container:hover::before {
     transform: rotate(-45deg) translate(0, 600px);
   }
 }
-body #popup .popup-container .card-container .close {
+body #popup .popup-container .card-container .close, body #popup-private .popup-container .card-container .close {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -276,7 +284,7 @@ body #popup .popup-container .card-container .close {
   border-radius: 2px;
   transition: background-color 0.3s;
 }
-body #popup .popup-container .card-container .close:hover {
+body #popup .popup-container .card-container .close:hover, body #popup-private .popup-container .card-container .close:hover {
   background-color: #fff;
 }
 body footer {
