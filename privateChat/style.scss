@@ -25,4 +25,18 @@
         }
     }
     
+    div.left {
+        
+        align-self: flex-start;
+        text-align: end;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+    }
+    
+    div.right {
+        align-self: flex-end;
+        text-align: end;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+
+    }
+    
 }

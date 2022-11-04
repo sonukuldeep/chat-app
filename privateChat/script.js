@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const copyToClip = () => {
 
-    if (queryString.length === 0) {
+    // if (queryString.length === 0) {
 
-        const rootID = document.querySelector('[data-url]')
-        rootID.style.cursor = 'pointer'
-        rootID.addEventListener('click', () => {
+    //     const rootID = document.querySelector('[data-url]')
+    //     rootID.style.cursor = 'pointer'
+    //     rootID.addEventListener('click', () => {
 
-            // Copy the text inside the text field
-            navigator.clipboard.writeText(rootID.getAttribute('data-url'));
-            console.log("copied", rootID.getAttribute('data-url'))
-        })
-    }
+    //         // Copy the text inside the text field
+    //         navigator.clipboard.writeText(rootID.getAttribute('data-url'));
+    //         console.log("copied", rootID.getAttribute('data-url'))
+    //     })
+    // }
 }
 
 const msg = document.querySelector("#userMsg")
@@ -45,4 +45,10 @@ function sendMsg() {
 window.addEventListener('beforeunload', (event) => {
     event.returnValue = `Are you sure you want to leave?`;
   });
+
+//   `<div class="${leftRight} chat-msg">${entry.msg}<span class="subscript">${entry.displayName}</span></div>`
+
+  function chatFormating(){
+
+  }
   
