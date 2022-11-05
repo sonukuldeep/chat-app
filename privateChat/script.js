@@ -19,17 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const copyToClip = () => {
 
-    // if (queryString.length === 0) {
+    const rootID = document.querySelector('#chat-window [data-url]')
+    if (queryString.length === 0) {
 
-    //     const rootID = document.querySelector('[data-url]')
-    //     rootID.style.cursor = 'pointer'
-    //     rootID.addEventListener('click', () => {
+        rootID.style.cursor = 'pointer'
+        rootID.addEventListener('click', () => {
 
-    //         // Copy the text inside the text field
-    //         navigator.clipboard.writeText(rootID.getAttribute('data-url'));
-    //         console.log("copied", rootID.getAttribute('data-url'))
-    //     })
-    // }
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(rootID.getAttribute('data-url'));
+            console.log("copied", rootID.getAttribute('data-url'))
+        })
+    } else {
+        rootID.innerHTML = "Say Hi to your friend"
+        rootID.removeAttribute('data-url')
+    }
 }
 
 const msg = document.querySelector("#userMsg")
@@ -38,17 +41,11 @@ msg?.addEventListener("keypress", (event) => { if (event.key === "Enter") { even
 btnTrigger?.addEventListener("click", () => { sendMsg() })
 function sendMsg() {
     addToRealTimeDB(msg.value, 'private')
-    console.log(msg.value)
+    // console.log(msg.value)
     msg.value = ""
 }
 
-window.addEventListener('beforeunload', (event) => {
-    event.returnValue = `Are you sure you want to leave?`;
-  });
+window.addEventListener('beforeunload', (event) => { //works once user interacts with the website else it doesn't trigger
+    event.returnValue = `Are you sure you want to leave? You will lose the chat`
+})
 
-//   `<div class="${leftRight} chat-msg">${entry.msg}<span class="subscript">${entry.displayName}</span></div>`
-
-  function chatFormating(){
-
-  }
-  

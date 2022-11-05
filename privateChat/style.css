@@ -22,9 +22,13 @@
   width: 100px;
   font-weight: 500;
 }
+.container .chat-box .box .chat-msg .subscript {
+  display: none;
+  font-size: x-small;
+}
 .container .chat-box div.left {
   align-self: flex-start;
-  text-align: end;
+  text-align: start;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .container .chat-box div.right {
