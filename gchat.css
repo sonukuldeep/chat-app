@@ -159,6 +159,30 @@
   justify-content: flex-start;
   align-items: center;
 }
+.container .chat-box .box:nth-of-type(1) .user .contextTriggerBtn {
+  position: relative;
+  margin-left: auto;
+}
+.container .chat-box .box:nth-of-type(1) .user .contextTriggerBtn .contextMenu {
+  border: 1px solid #333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 2;
+}
+.container .chat-box .box:nth-of-type(1) .user .contextTriggerBtn .contextMenu div ul {
+  list-style: none;
+}
+.container .chat-box .box:nth-of-type(1) .user .contextTriggerBtn .contextMenu div ul li button {
+  width: 180px;
+  padding: 5px;
+  margin: 5px 0px;
+}
+.container .chat-box .box:nth-of-type(1) .user .contextTriggerBtn .contextMenu.visible {
+  display: block;
+}
 .container .chat-box .box:nth-of-type(2) {
   overflow: auto;
   border-left: none;

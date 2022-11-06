@@ -171,6 +171,39 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
+
+                .contextTriggerBtn {
+                    position: relative;
+                    margin-left: auto;
+
+                    .contextMenu {
+                        border: 1px solid #333;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: none;
+                        background-color: rgba(255,255,255,0.6);
+                        z-index: 2;
+
+                        div {
+                            ul{
+                                list-style: none;
+                                li {
+                                    button {
+                                        width: 180px;
+                                        padding: 5px;
+                                        margin: 5px 0px;
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .contextMenu.visible {
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -186,6 +219,7 @@
             -ms-overflow-style: none;
             /* IE and Edge */
             scrollbar-width: none;
+
             /* Firefox */
             &::-webkit-scrollbar {
                 display: none;
@@ -210,6 +244,7 @@
             .chat-msg {
                 display: flex;
                 flex-direction: column;
+
                 .subscript {
                     display: none;
                     font-size: x-small;

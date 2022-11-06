@@ -12,18 +12,7 @@ function activateList(index) {
     // console.log(chatList)
 }
 
-//log in log out with google
-const signin_out = document.querySelector("#signIn-signOut")
-signin_out.addEventListener("click", () => { callGoogleSignIn() })
-function callGoogleSignIn() {
-    const signoutButton = document.querySelectorAll('.signIn')[0]
-    if (signoutButton.classList.contains("logged-in")) {
-        // logout()
-    } else {
-        googleSignIn()
 
-    }
-}
 
 // const group_chat = document.querySelector("#signIn-signOut")
 // signin_out.addEventListener("click", ()=>{callGoogleSignIn()})
@@ -47,15 +36,20 @@ function sendMsg() {
     msg.value = ""
 }
 
+//popup triggers
 const popup = document.querySelector("#popup")
 const popupCloseBtn = document.querySelector("#popup .close")
-popupCloseBtn?.addEventListener("click", () => { popup.classList.toggle("disable") })
-
+const popup2 = document.querySelector("#popup-private")
+const popupCloseBtn2 = document.querySelector("#popup-private .close")
 const groupChatBtn = document.querySelectorAll(".trigger-group-chat")
-groupChatBtn[0]?.addEventListener("click", () => { popup.classList.toggle("disable") })
-groupChatBtn[1]?.addEventListener("click", () => { popup.classList.toggle("disable") })
-
 const popupPrivate = document.querySelector("#popup-private")
 const privatepChatBtn = document.querySelectorAll(".trigger-private-chat")
-privatepChatBtn[0]?.addEventListener("click", () => { popupPrivate.classList.toggle("disable") })
-privatepChatBtn[1]?.addEventListener("click", () => { popupPrivate.classList.toggle("disable") })
+
+popupCloseBtn?.addEventListener("click", () => { popup.classList.toggle("disable") })
+popupCloseBtn2?.addEventListener("click", () => { popup2.classList.toggle("disable") })
+
+groupChatBtn[0]?.addEventListener("click", () => { popup.classList.toggle("disable");popupPrivate.classList.add("disable") })
+groupChatBtn[1]?.addEventListener("click", () => { popup.classList.toggle("disable");popupPrivate.classList.add("disable") })
+
+privatepChatBtn[0]?.addEventListener("click", () => { popup.classList.add("disable");popupPrivate.classList.toggle("disable") })
+privatepChatBtn[1]?.addEventListener("click", () => { popup.classList.add("disable");popupPrivate.classList.toggle("disable") })
