@@ -169,7 +169,7 @@ body main section .disclaimer h3 {
   text-decoration: underline;
   padding-bottom: 15px;
 }
-body #popup.disable, body #popup-private.disable {
+body #popup.disable, body #popup-private.disable, body .notificationDiv.disable {
   display: none;
 }
 body #popup .popup-container, body #popup-private .popup-container {

@@ -40,6 +40,31 @@
   margin-left: 5px;
   cursor: pointer;
 }
+.container .more-options #signIn-signOut {
+  padding: 0px;
+}
+.container .more-options .big-devices .signIn, .container .more-options .touch-devices .signIn {
+  position: relative;
+  width: 110px;
+  padding: 5px 0;
+  text-align: center;
+}
+.container .more-options .big-devices .signIn ul, .container .more-options .touch-devices .signIn ul {
+  display: none;
+  position: absolute;
+  left: -1px;
+}
+.container .more-options .big-devices .signIn ul li, .container .more-options .touch-devices .signIn ul li {
+  width: 110px;
+  margin: 2px;
+  text-align: center;
+}
+.container .more-options .big-devices .signIn ul li:nth-child(1), .container .more-options .touch-devices .signIn ul li:nth-child(1) {
+  border-top: none;
+}
+.container .more-options .big-devices .signIn:hover ul, .container .more-options .touch-devices .signIn:hover ul {
+  display: block;
+}
 .container .more-options .touch-devices {
   display: none;
 }
@@ -245,6 +270,135 @@
 .container .box {
   border: 1px solid #fff;
   display: flex;
+}
+.container .notificationDiv {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.container .notificationDiv .popup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .notificationDiv .popup-container .card-container {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 420px;
+  height: 200px;
+  border-radius: 1rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+.container .notificationDiv .popup-container .card-container .card {
+  width: 99%;
+  height: 99%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #333;
+  background-color: rgb(39, 212, 234);
+  border-radius: 1rem;
+  overflow: hidden;
+  z-index: 1;
+}
+.container .notificationDiv .popup-container .card-container .card ul {
+  font-size: 16px;
+  text-align: justify;
+  padding: 5px;
+  margin-top: 5px;
+  overflow: auto;
+}
+.container .notificationDiv .popup-container .card-container .card p {
+  font-size: x-large;
+  text-decoration: underline;
+  margin-top: 5px;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .notificationDiv .popup-container .card-container .card .btn {
+  margin-top: 5px;
+  width: 60px;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  transition: background-color 0.3s;
+  position: absolute;
+  bottom: 20px;
+}
+.container .notificationDiv .popup-container .card-container .card .btn:hover {
+  background-color: #fff;
+}
+.container .notificationDiv .popup-container .card-container .card .btn a {
+  color: #333;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  padding: 2px 0;
+}
+.container .notificationDiv .popup-container .card-container .card .btn-justify-col {
+  display: flex;
+  justify-content: center;
+}
+.container .notificationDiv .popup-container .card-container .card .btn-justify-col div {
+  width: 100px;
+  margin: 5px;
+}
+.container .notificationDiv .popup-container .card-container::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 35px;
+  top: -130px;
+  right: 200px;
+  background-color: #377953;
+  transform: rotate(-45deg) translate(0, -100px);
+}
+.container .notificationDiv .popup-container .card-container:hover::before {
+  -webkit-animation-name: cardEffect;
+          animation-name: cardEffect;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+@-webkit-keyframes cardEffect {
+  100% {
+    transform: rotate(-45deg) translate(0, 600px);
+  }
+}
+@keyframes cardEffect {
+  100% {
+    transform: rotate(-45deg) translate(0, 600px);
+  }
+}
+.container .notificationDiv .popup-container .card-container .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: x-large;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0px 10px;
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+}
+.container .notificationDiv .popup-container .card-container .close:hover {
+  background-color: #fff;
+}
+.container .notificationDiv.disable {
+  display: none;
 }
 @media screen and (max-width: 768px) {
   .container .chat-box {
