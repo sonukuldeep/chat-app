@@ -12,9 +12,6 @@ if (queryString.length !== 0) {
 document.addEventListener('DOMContentLoaded', () => {
     addToPrivateDB(copyToClip)
 
-
-    // privateChat()
-
 })
 
 const copyToClip = () => {
@@ -44,6 +41,13 @@ function sendMsg() {
     // console.log(msg.value)
     msg.value = ""
 }
+
+
+const notificationDiv = document.querySelector('.notificationDiv')
+const notificationDivBtn = document.querySelector('.notificationDiv .close')
+notificationDivBtn.addEventListener('click', ()=>{
+    notificationDiv.classList.toggle('disable')
+})
 
 window.addEventListener('beforeunload', (event) => { //works once user interacts with the website else it doesn't trigger
     event.returnValue = `Are you sure you want to leave? You will lose the chat`
