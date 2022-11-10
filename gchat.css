@@ -39,6 +39,11 @@
   color: #fff;
   margin-left: 5px;
   cursor: pointer;
+  text-shadow: none;
+  transition: text-shadow 0.3s;
+}
+.container .more-options ul li:hover {
+  text-shadow: 1px 1px 3px #000;
 }
 .container .more-options #signIn-signOut {
   padding: 0px;
@@ -285,7 +290,7 @@
   display: grid;
   place-items: center;
   position: relative;
-  width: 420px;
+  width: min(420px, 95%);
   height: 200px;
   border-radius: 1rem;
   background-color: #fff;
@@ -401,6 +406,10 @@
   display: none;
 }
 @media screen and (max-width: 768px) {
+  .container .more-options {
+    width: 100%;
+    margin: auto;
+  }
   .container .chat-box {
     margin-top: 50px;
     height: 95%;

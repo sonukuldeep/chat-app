@@ -151,7 +151,7 @@ body main section {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 75%;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -299,6 +299,9 @@ body footer {
     width: min(100% - 2rem, 700px);
   }
   body #popup .popup-container .card-container {
+    width: min(90%, 420px);
+  }
+  body #popup-private .popup-container .card-container {
     width: min(90%, 420px);
   }
 }

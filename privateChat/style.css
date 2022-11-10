@@ -39,3 +39,8 @@
 .container .chat-box .notificationDiv.disable {
   display: none;
 }
+@media screen and (max-width: 768px) {
+  .container .chat-box {
+    width: auto;
+  }
+}

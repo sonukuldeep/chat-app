@@ -1,53 +1,61 @@
-.container .chat-box {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr 1fr;
-    width: 50%;
+.container {
 
-    #chat-window {
-        height: auto;
-    }
+    .chat-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr 1fr;
+        width: 50%;
 
-    .box {
-        position: relative;
-        height: 40px;
-
-        #userMsg {
-            height: 100%;
-            width:auto;
+        #chat-window {
+            height: auto;
         }
-        .sendBtn {
-            position: absolute;
-            right: 0;
+
+        .box {
+            position: relative;
             height: 40px;
-            width: 100px;
-            font-weight: 500;
-        }
 
-        .chat-msg {
-            .subscript{
-                display: none;
-                font-size: x-small;
+            #userMsg {
+                height: 100%;
+                width: auto;
+            }
+
+            .sendBtn {
+                position: absolute;
+                right: 0;
+                height: 40px;
+                width: 100px;
+                font-weight: 500;
+            }
+
+            .chat-msg {
+                .subscript {
+                    display: none;
+                    font-size: x-small;
+                }
             }
         }
-    }
-    
-    div.left {
-        
-        align-self: flex-start;
-        text-align: start;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
-    }
-    
-    div.right {
-        align-self: flex-end;
-        text-align: end;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+
+        div.left {
+
+            align-self: flex-start;
+            text-align: start;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        div.right {
+            align-self: flex-end;
+            text-align: end;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+
+        }
+
+        .notificationDiv.disable {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: auto;
+        }
 
     }
-
-    .notificationDiv.disable {
-        display: none;
-    }
-    
 }
