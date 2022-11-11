@@ -48,26 +48,31 @@
 .container .more-options #signIn-signOut {
   padding: 0px;
 }
-.container .more-options .big-devices .signIn, .container .more-options .touch-devices .signIn {
+.container .more-options .big-devices .signIn,
+.container .more-options .touch-devices .signIn {
   position: relative;
   width: 110px;
   padding: 5px 0;
   text-align: center;
 }
-.container .more-options .big-devices .signIn ul, .container .more-options .touch-devices .signIn ul {
+.container .more-options .big-devices .signIn ul,
+.container .more-options .touch-devices .signIn ul {
   display: none;
   position: absolute;
   left: -1px;
 }
-.container .more-options .big-devices .signIn ul li, .container .more-options .touch-devices .signIn ul li {
+.container .more-options .big-devices .signIn ul li,
+.container .more-options .touch-devices .signIn ul li {
   width: 110px;
   margin: 2px;
   text-align: center;
 }
-.container .more-options .big-devices .signIn ul li:nth-child(1), .container .more-options .touch-devices .signIn ul li:nth-child(1) {
+.container .more-options .big-devices .signIn ul li:nth-child(1),
+.container .more-options .touch-devices .signIn ul li:nth-child(1) {
   border-top: none;
 }
-.container .more-options .big-devices .signIn:hover ul, .container .more-options .touch-devices .signIn:hover ul {
+.container .more-options .big-devices .signIn:hover ul,
+.container .more-options .touch-devices .signIn:hover ul {
   display: block;
 }
 .container .more-options .touch-devices {
@@ -85,6 +90,9 @@
   .container .more-options .touch-devices .enableOnClick.disabled {
     display: none;
   }
+}
+.container .chat-box-touch-devices {
+  display: none;
 }
 .container h1 {
   padding: 10px 0;
@@ -414,6 +422,76 @@
     margin-top: 50px;
     height: 95%;
     width: 95%;
+    display: none;
+  }
+  .container .chat-box-touch-devices {
+    display: grid;
+    grid-auto-rows: 93% 7%;
+    height: 90vh;
+    grid-auto-columns: 1fr;
+    width: 95vw;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px 2px #333;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(1) {
+    overflow: auto;
+    border-left: none;
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(1)::-webkit-scrollbar {
+    display: none;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(1) div {
+    margin: 2px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(1) .right {
+    align-self: flex-end;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(1) .left {
+    align-self: flex-start;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(1) .chat-msg {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(1) .chat-msg .subscript {
+    display: none;
+    font-size: x-small;
+    text-transform: lowercase;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(2) {
+    height: 50px;
+    align-self: end;
+    border-left: none;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(2) input {
+    border: none;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0 5px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+  }
+  .container .chat-box-touch-devices .box:nth-of-type(2) .sendBtn {
+    width: 80px;
+    background: burlywood;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 2px 2px 5px #333;
+    font-weight: 800;
   }
   .container h1 {
     padding: 10px 0;

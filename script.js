@@ -21,13 +21,25 @@ closeBtn.addEventListener("click", ()=>{
 
 
 const msg = document.querySelector("#userMsg")
-const btnTrigger = document.querySelector(".sendBtn")
+const msg2 = document.querySelector(".chat-box-touch-devices #userMsg")
+const btnTrigger = document.querySelectorAll(".sendBtn")
 msg?.addEventListener("keypress", (event) => { if (event.key === "Enter") { event.preventDefault(); sendMsg() } })
-btnTrigger?.addEventListener("click", () => { sendMsg() })
+
+// btnTrigger?.addEventListener("click", () => { sendMsg() })
+btnTrigger.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+        sendMsg()
+    })
+})
 function sendMsg() {
     addToRealTimeDB(msg.value)
-    console.log(msg.value)
     msg.value = ""
+    if(msg2)
+    {
+        addToRealTimeDB(msg2.value)
+        msg2.value = ""
+    }
+    // console.log(msg.value)
 }
 
 //popup triggers

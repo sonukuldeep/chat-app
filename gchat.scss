@@ -44,16 +44,19 @@
                 cursor: pointer;
                 text-shadow: none;
                 transition: text-shadow 0.3s;
-                
-                &:hover{
+
+                &:hover {
                     text-shadow: 1px 1px 3px #000;
                 }
             }
         }
+
         #signIn-signOut {
             padding: 0px;
         }
-        .big-devices,.touch-devices {
+
+        .big-devices,
+        .touch-devices {
             .signIn {
                 position: relative;
                 width: 110px;
@@ -71,10 +74,12 @@
                         margin: 2px;
                         text-align: center;
                     }
+
                     li:nth-child(1) {
                         border-top: none;
                     }
                 }
+
                 &:hover ul {
                     display: block;
                 }
@@ -102,6 +107,11 @@
             }
         }
 
+
+    }
+
+    .chat-box-touch-devices {
+        display: none;
     }
 
     h1 {
@@ -219,12 +229,13 @@
                         top: 0;
                         right: 0;
                         display: none;
-                        background-color: rgba(255,255,255,0.6);
+                        background-color: rgba(255, 255, 255, 0.6);
                         z-index: 2;
 
                         div {
-                            ul{
+                            ul {
                                 list-style: none;
+
                                 li {
                                     button {
                                         width: 180px;
@@ -243,6 +254,7 @@
                 }
             }
         }
+
 
         .box:nth-of-type(2) {
             overflow: auto;
@@ -390,9 +402,11 @@
                             padding: 2px 0;
                         }
                     }
+
                     .btn-justify-col {
                         display: flex;
                         justify-content: center;
+
                         div {
                             width: 100px;
                             margin: 5px;
@@ -471,6 +485,94 @@
             margin-top: 50px;
             height: 95%;
             width: 95%;
+            display: none;
+
+
+        }
+
+        .chat-box-touch-devices {
+            display: grid;
+            grid-auto-rows: 93% 7%;
+            height: 90vh;
+            grid-auto-columns: 1fr;
+            width: 95vw;
+            margin-top: 20px;
+
+            border: 1px solid #fff;
+            box-shadow: 0 0 10px 2px #333;
+
+
+            .box:nth-of-type(1) {
+                overflow: auto;
+                border-left: none;
+                border-bottom: none;
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+
+                //remove scrollbar
+                -ms-overflow-style: none;
+                /* IE and Edge */
+                scrollbar-width: none;
+
+                /* Firefox */
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                div {
+                    margin: 2px;
+                    border-radius: 4px;
+                    padding: 5px 10px;
+                    font-weight: 800;
+                    text-transform: capitalize;
+                }
+
+                .right {
+                    align-self: flex-end;
+                }
+
+                .left {
+                    align-self: flex-start;
+                }
+
+                .chat-msg {
+                    display: flex;
+                    flex-direction: column;
+
+                    .subscript {
+                        display: none;
+                        font-size: x-small;
+                        text-transform: lowercase;
+                    }
+                }
+            }
+
+            .box:nth-of-type(2) {
+                height: 50px;
+                align-self: end;
+                border-left: none;
+
+                input {
+                    border: none;
+                    width: 100%;
+                    font-size: 1.5rem;
+                    padding: 0 5px;
+                    background-color: transparent;
+                    color: #fff;
+                    outline: none;
+                }
+
+                .sendBtn {
+                    width: 80px;
+                    background: burlywood;
+                    border-radius: 5px;
+                    color: #fff;
+                    text-shadow: 2px 2px 5px #333;
+                    font-weight: 800;
+                }
+            }
+
         }
 
         h1 {
