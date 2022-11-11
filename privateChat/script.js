@@ -9,19 +9,14 @@ if (queryString.length !== 0) {
     console.log(`sessionStorage set to ${urlParamsArray[0]}`)
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    addToPrivateDB(copyToClip)
-
-})
-
 const copyToClip = () => {
-
+    
     const rootID = document.querySelector('#chat-window [data-url]')
     if (queryString.length === 0) {
-
+        
         rootID.style.cursor = 'pointer'
         rootID.addEventListener('click', () => {
-
+            
             // Copy the text inside the text field
             navigator.clipboard.writeText(rootID.getAttribute('data-url'));
             console.log("copied", rootID.getAttribute('data-url'))
@@ -31,6 +26,8 @@ const copyToClip = () => {
         rootID.removeAttribute('data-url')
     }
 }
+
+addToPrivateDB(copyToClip)
 
 const msg = document.querySelector("#userMsg")
 const btnTrigger = document.querySelector(".sendBtn")

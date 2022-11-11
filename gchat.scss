@@ -295,9 +295,10 @@
                 flex-direction: column;
 
                 .subscript {
-                    display: none;
+                    // display: none;
                     font-size: x-small;
                     text-transform: lowercase;
+
                 }
             }
         }
@@ -340,7 +341,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-
+        width: min(420px, 95%);
+        
         .popup-container {
             display: flex;
             justify-content: center;
@@ -492,9 +494,9 @@
 
         .chat-box-touch-devices {
             display: grid;
-            grid-auto-rows: 93% 7%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 4fr auto;
             height: 90vh;
-            grid-auto-columns: 1fr;
             width: 95vw;
             margin-top: 20px;
 
@@ -541,7 +543,7 @@
                     flex-direction: column;
 
                     .subscript {
-                        display: none;
+                        // display: none;
                         font-size: x-small;
                         text-transform: lowercase;
                     }

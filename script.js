@@ -32,9 +32,14 @@ btnTrigger.forEach(btn=>{
     })
 })
 function sendMsg() {
-    addToRealTimeDB(msg.value)
-    msg.value = ""
-    if(msg2)
+    
+    if(msg.value !== ""){
+        addToRealTimeDB(msg.value)
+        msg.value = ""
+    }
+
+
+    if(msg2.value !== "")
     {
         addToRealTimeDB(msg2.value)
         msg2.value = ""
