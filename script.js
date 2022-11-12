@@ -64,3 +64,9 @@ groupChatBtn[1]?.addEventListener("click", () => { popup.classList.toggle("disab
 
 privatepChatBtn[0]?.addEventListener("click", () => { popup.classList.add("disable");popupPrivate.classList.toggle("disable") })
 privatepChatBtn[1]?.addEventListener("click", () => { popup.classList.add("disable");popupPrivate.classList.toggle("disable") })
+
+//sigin window trigger
+const signinPopup = document.querySelector('#popup-signIn')
+if(signinPopup){
+    document.querySelector('#popup-signIn .close').addEventListener('click', ()=>{signinPopup.classList.toggle('disable')})
+}

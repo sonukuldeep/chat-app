@@ -195,11 +195,11 @@ body {
         }
     }
 
-    #popup.disable, #popup-private.disable,.notificationDiv.disable {
+    #popup.disable, #popup-private.disable,.notificationDiv.disable,#popup-signIn.disable {
         display: none;
     }
 
-    #popup, #popup-private {
+    #popup, #popup-private,#popup-signIn {
         .popup-container {
             height: 75vh;
             display: flex;
@@ -215,11 +215,20 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     text-align: center;
-                    color: #333;
+                    color: #fff;
                     background-color: #fbd100;
                     border-radius: 1rem;
                     overflow: hidden;
                     z-index: 1;
+                    position: relative;
+
+                    p {
+                        position: absolute;
+                        top: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        color: #fff;
+                    }
 
                     ul {
                         font-size: 16px;
@@ -230,7 +239,7 @@ body {
                     }
 
                     p {
-                        font-size: xx-large;
+                        font-size: x-large;
                         text-decoration: underline;
                         margin-top: 5px;
                     }
@@ -264,6 +273,7 @@ body {
                             margin: 5px;
                         }
                     }
+
 
                 }
 
@@ -319,7 +329,13 @@ body {
                     }
                 }
             }
+
         }
+        
+    }
+
+    #popup-signIn .popup-container .card ul {
+        margin-top: 20px !important;
     }
 
     footer {
