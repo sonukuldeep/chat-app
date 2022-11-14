@@ -450,7 +450,7 @@ export const privateChat = (copyToClip) => {
                 leftRight === "left" ? notificationTrigger = true : notificationTrigger = false
 
                 if (entry.uid === 'bot') {
-                    const urlData = `http://localhost:5500/privateChat/?room=${chatroomID}&chatdata=${chatroomData}`
+                    const urlData = `https://random-private-chat.netlify.app/privateChat/?room=${chatroomID}&chatdata=${chatroomData}`
                     return `<div class='chat-msg' data-url='${urlData}' style='${BackgroundColor};${textStyle};text-transform:none'>${entry.msg}</div>`
                 }
                 return `<div class="${leftRight} chat-msg">${entry.msg}<span class="subscript">${entry.displayName}</span></div>`
@@ -541,7 +541,7 @@ function chatResponseAccept() {
             response.addEventListener('click', () => {
                 const roomData = response.getAttribute('data-chat')
                 const roomId = response.getAttribute('data-roomid')
-                const urlData = `http://localhost:5500/privateChat/?room=${roomId}&chatdata=${roomData}`
+                const urlData = `https://random-private-chat.netlify.app/privateChat/?room=${roomId}&chatdata=${roomData}`
                 // console.log(roomData,roomId)
                 window.open(urlData, '_blank')
             })
@@ -588,7 +588,7 @@ async function acceptChatInviteAddTrigger() {
         }, {
             onlyOnce: true
         })
-        window.open(`http://localhost:5500/privateChat/?room=${roomId}&chatdata=${roomData}`, '_blank')
+        window.open(`https://random-private-chat.netlify.app/privateChat/?room=${roomId}&chatdata=${roomData}`, '_blank')
     }
 
     acceptChatInviteBtn.forEach(btn => {
