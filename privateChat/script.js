@@ -1,4 +1,4 @@
-import { addToPrivateDB, privateChat, addToRealTimeDB } from '../Config/firebaseConfig.js'
+import { addToPrivateDB, privateChat, addToRealTimeDB } from '../firebaseConfig.js'
 
 const queryString = window.location.search
 const urlParams = new URLSearchParams(queryString)

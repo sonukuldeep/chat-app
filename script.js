@@ -1,4 +1,4 @@
-import { googleSignIn, logout, addToRealTimeDB } from './Config/firebaseConfig.js'
+import { googleSignIn, logout, addToRealTimeDB } from './firebaseConfig.js'
 
 
 

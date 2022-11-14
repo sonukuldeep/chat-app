@@ -1,4 +1,4 @@
-import { storageRef } from "./Config/firebaseConfig.js"
+import { storageRef } from "./firebaseConfig.js"
 import { ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-storage.js"
 
 const inputElement = document.querySelector("#imageUpload")
