@@ -18,7 +18,7 @@ const firebaseConfig = {
 
 
 //my server url. Helps hide apis and assign them when needed
-const url = "http://localhost:5000/api"
+const url = "https://gleaming-pink-pea-coat.cyclic.app/api"
 // const url = "https://gleaming-pink-pea-coat.cyclic.app"
 
 const apiCall = async () => {
