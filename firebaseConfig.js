@@ -110,7 +110,7 @@ onAuthStateChanged(auth, (user) => {
         <li>Messages</li>
         <li>Followers</li>
         <li>Share</li>
-        <li><a href='./profile.html'>Settings</a></li>
+        <li><a href='/profile.html'>Settings</a></li>
         <li class='triggerLogout'>Log out</li>
     </ul>`
 
