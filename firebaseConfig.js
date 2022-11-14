@@ -48,6 +48,7 @@ const UTCDate = currentDate.getUTCFullYear() + "/" + currentDate.getUTCMonth() +
 const chatRef = ref(rdb, 'chatBox/' + UTCDate)
 
 let siginStatus = false
+let anonymousLoginStatus = false
 // SIGNIN SIGNUP AND SIGNIN STATUS
 //signin With Google    https://firebase.google.com/docs/auth/web/google-signin?hl=en&authuser=0#handle_the_sign-in_flow_with_the_firebase_sdk
 export async function googleSignIn() {
@@ -77,6 +78,7 @@ async function anonymousSignIn() {
         siginStatus = true
         const credential = await signInAnonymously(auth)
         document.querySelector('#popup-signIn').classList.toggle('disable')
+        anonymousLoginStatus = true
         setTimeout(() => {
             logout()
         }, 15 * 60 * 1000); //kick user ofter 15 min
@@ -360,6 +362,7 @@ export const addToPrivateDB = (dependencyFunction, runFromGchat = false) => {
         //confirm login coformation
         const userData = JSON.parse(localStorage.getItem("userData"))
         if (userData === "") throw "User not logged in"
+        if (anonymousLoginStatus === true) throw "Anonymous user cant use feature"
 
         const queryString = window.location.search
 
